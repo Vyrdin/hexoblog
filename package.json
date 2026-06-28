@@ -1,0 +1,8 @@
+{
+  "name": "hexo-dcdeploy",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "hexo": "^7.0.0"
+  }
+}
