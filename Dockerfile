@@ -4,7 +4,7 @@ RUN npm install -g http-server
 
 WORKDIR /app
 
-RUN echo "hello dcdeploy" > index.html
+RUN echo "ok dcdeploy" > index.html
 
 EXPOSE 8080
 
