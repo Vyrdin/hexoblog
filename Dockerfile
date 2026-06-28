@@ -1,17 +1,7 @@
 FROM node:18-alpine
 
-RUN npm install -g hexo-cli
+RUN npm install -g http-server
 
-WORKDIR /app
+RUN mkdir /app && echo "OK DCDEPLOY" > /app/index.html
 
-COPY . .
-
-RUN npm install && hexo generate
-
-FROM nginx:alpine
-
-COPY --from=0 /app/public /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD sh -c "http-server /app -p $PORT -a 0.0.0.0"
